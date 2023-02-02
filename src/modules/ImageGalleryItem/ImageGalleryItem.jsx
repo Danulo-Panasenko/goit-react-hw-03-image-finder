@@ -3,9 +3,8 @@ import styles from './ImageGalleryItem.module.css';
 
 const ImageGalleryItem = ({ webformatURL, largeImageURL, tags, onClick }) => {
   return (
-    <li className={styles.item}>
-      onClick={() => onClick(largeImageURL, tags)}
-      <img src={webformatURL} alt={tags} />
+    <li onClick={() => onClick(largeImageURL, tags)} className={styles.item}>
+      <img src={webformatURL} alt={tags} className={styles.image} />
     </li>
   );
 };

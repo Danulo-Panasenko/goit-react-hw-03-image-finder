@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import styles from './Searchbar.module.css';
 import PropTypes from 'prop-types';
+import { ImSearch } from 'react-icons/im';
 
 class Searchbar extends Component {
   state = {
@@ -8,7 +9,7 @@ class Searchbar extends Component {
   };
   handleChange = ({ target }) => {
     const { name, value } = target;
-    this.state({ [name]: value });
+    this.setState({ [name]: value });
   };
   handleSubmit = e => {
     e.preventDefault();
@@ -28,6 +29,7 @@ class Searchbar extends Component {
         <form className={styles.form} onSubmit={handleSubmit}>
           <button type="submit" className={styles.button}>
             <span className={styles.label}>Search</span>
+            <ImSearch />
           </button>
 
           <input
