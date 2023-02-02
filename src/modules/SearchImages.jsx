@@ -56,7 +56,7 @@ class SearchImages extends Component {
     const isImages = Boolean(items.length);
     const totalPage = Math.ceil(total / 12);
     return (
-      <>
+      <div>
         <Searchbar onSubmit={searchImages} />
         <ImageGallery items={items} />
         {loading && <Loader />}
@@ -65,7 +65,7 @@ class SearchImages extends Component {
         {isImages && page < totalPage && (
           <Button onLoadMore={loadMore} text={'Load more'} />
         )}
-      </>
+      </div>
     );
   }
 }
