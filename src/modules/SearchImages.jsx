@@ -50,8 +50,7 @@ class SearchImages extends Component {
     this.setState(({ page }) => ({ page: page + 1 }));
   };
   render() {
-    const { items, loading, err, total, page, showModal, imgDetails } =
-      this.state;
+    const { items, loading, err, total, page } = this.state;
     const { searchImages, loadMore } = this;
     const isImages = Boolean(items.length);
     const totalPage = Math.ceil(total / 12);
