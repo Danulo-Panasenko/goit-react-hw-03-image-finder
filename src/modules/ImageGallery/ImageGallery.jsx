@@ -11,6 +11,7 @@ const ImageGallery = ({ items, onClick }) => {
           webformatURL={webformatURL}
           largeImageURL={largeImageURL}
           tags={tags}
+          required
         />
       ))}
     </ul>
